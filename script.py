@@ -15,8 +15,12 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 html = urlopen("http://127.0.0.1:8000/polls/")
-res = BeautifulSoup(html.read(),"html5lib");
-tags= res.find('fieldset', id='fldAssuntos')
+res = BeautifulSoup(html.read(),"html5lib")
+#tags = res.find('tr',class_='infraTrClara')
+#tags = res.find_all('fieldset')[2].getText()
+tags =res.find_all('div')[0].getText()
+#tags= res.find('fieldset', id='fldAssuntos')
 #tags = res.find('tr',class_='infraTrClara')
 #tags = res.find('form',attr={'id':'formProcessoLista'})
-print(tags.getText())
+#tags = res.find('table',class_='infraTable')
+print(tags)
