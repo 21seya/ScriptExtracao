@@ -11,14 +11,6 @@
 #page = open(url)
 #soup = BeautifulSoup(page.read())
 
-#cities = soup.find_all('span', {'class' : 'city-sh'})
-
-#for city in cities:
- #   print city
-
-#from bs4 import BeautifulSoup
-#import requests 
-#soup = BeautifulSoup(page.content, 'html.parser')
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
